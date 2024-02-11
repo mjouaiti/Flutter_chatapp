@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "6fbe4a17fe82a518adc47e81b9737f2a5a14ecc605fc033dec636916dc2d6428"
+build_start_time: [1707056990, 661233000]
+build_end_time: [1707056996, 70141000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Runner/AppDelegate.swift": [1705332342, 121539853]

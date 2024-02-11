@@ -1,0 +1,33 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "257336be5f95f0536fd6d0755db4ae848eb87541c655ad3fef0b0595573ef256"
+build_start_time: [1705575753, 790912000]
+build_end_time: [1705575753, 847687000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGallery.swift": !private [1705575743, 165061061]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryContentVC.swift": !private [1705575743, 165221934]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryItem.swift": !private [1705575743, 165572013]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryScrollView.swift": !private [1705575743, 168244814]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoIncrementalIndicator.swift": !private [1705575743, 165408182]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoPreviewFactory.swift": !private [1705575743, 164164781]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoBasePreviewVC.swift": !private [1705575743, 166248963]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoContentAnimationView.swift": !private [1705575743, 167989442]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoProgressIndicator.swift": !private [1705575743, 168105066]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoProgressIndicatorProtocol.swift": !private [1705575743, 167502532]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoBaseImagePreviewVC.swift"
+  : !private [1705575743, 167045245]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageDownloader.swift": !private [1705575743, 166481169]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImagePreviewVC.swift": !private [1705575743, 166616751]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageUtility.swift": !private [1705575743, 166766249]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageView.swift": !private [1705575743, 166891456]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PDFPreview/DKPDFView.swift": !private [1705575743, 167707987]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PDFPreview/DKPhotoPDFPreviewVC.swift": !private [1705575743, 167830819]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PlayerPreview/DKPhotoPlayerPreviewVC.swift": !private [1705575743, 166082215]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PlayerPreview/DKPlayerView.swift": !private [1705575743, 165907551]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoQRCodeResultVC.swift": !private [1705575743, 167375408]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoWebVC.swift": !private [1705575743, 167247618]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Resource/DKPhotoGalleryResource.swift": !private [1705575743, 173318002]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryInteractiveTransition.swift"
+  : !private [1705575743, 164556026]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionController.swift": !private [1705575743, 164385903]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionDismiss.swift": !private [1705575743, 164874272]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionPresent.swift": !private [1705575743, 164700524]

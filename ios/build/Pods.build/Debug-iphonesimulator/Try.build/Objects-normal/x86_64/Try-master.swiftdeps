@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "1cd5918b36153cf95ce2c1555597222ef2d786f516053784300584f2faba0b86"
+build_start_time: [1706018564, 296709000]
+build_end_time: [1706018565, 25061000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/Try/Try/trap.swift": [1706018548, 836043403]

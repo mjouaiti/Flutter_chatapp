@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "133f538c2b3a082b8e596d89497b9db8eb8d0096e324227bc9592bb3873af365"
+build_start_time: [1707056968, 746465000]
+build_end_time: [1707056976, 722640000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/NSImage+SwiftyGif.swift": [1707056954, 158033037]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/NSImageView+SwiftyGif.swift": [1707056954, 160726001]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/ObjcAssociatedWeakObject.swift": [1707056954, 159694415]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/SwiftyGifManager.swift": [1707056954, 160461167]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/UIImage+SwiftyGif.swift": [1707056954, 159978374]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/SwiftyGif/SwiftyGif/UIImageView+SwiftyGif.swift": [1707056954, 157768828]

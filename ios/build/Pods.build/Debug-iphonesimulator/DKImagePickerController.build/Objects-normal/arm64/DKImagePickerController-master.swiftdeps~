@@ -1,0 +1,43 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "3885f8ad91a40c64a0d3ca127c54fb01b5b2304818712faa5f17cce8041704ae"
+build_start_time: [1705575756, 14471000]
+build_end_time: [1705575756, 52534000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageBaseManager.swift": !private [1705575740, 787047760]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageDataManager.swift": !private [1705575740, 786763389]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageGroupDataManager.swift": !private [1705575740, 786913553]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Export.swift": !private [1705575740, 787255049]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Fetch.swift": !private [1705575740, 787509629]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset.swift": !private [1705575740, 787611670]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAssetGroup.swift": !private [1705575740, 787379964]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageAssetExporter.swift"
+  : !private [1705575740, 787964624]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageExtensionController.swift"
+  : !private [1705575740, 787830959]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerController.swift"
+  : !private [1705575740, 788117747]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerControllerBaseUIDelegate.swift"
+  : !private [1705575740, 788242203]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKPopoverViewController.swift"
+  : !private [1705575740, 788357660]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/Resource/DKImagePickerControllerResource.swift"
+  : !private [1705575740, 799784766]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupCellItemProtocol.swift"
+  : !private [1705575740, 789268316]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailBaseCell.swift"
+  : !private [1705575740, 789418897]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailCameraCell.swift"
+  : !private [1705575740, 789017569]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailImageCell.swift"
+  : !private [1705575740, 789550479]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailVideoCell.swift"
+  : !private [1705575740, 789132525]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupDetailVC.swift"
+  : !private [1705575740, 788812571]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupGridLayout.swift"
+  : !private [1705575740, 788693989]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupListVC.swift"
+  : !private [1705575740, 789681102]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKPermissionView.swift"
+  : !private [1705575740, 788576491]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/Extensions/DKImageExtensionGallery.swift": !private [1705575740, 786240645]

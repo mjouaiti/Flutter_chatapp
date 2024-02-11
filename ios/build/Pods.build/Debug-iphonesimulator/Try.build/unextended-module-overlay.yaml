@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/Melanie/flutter_apps/voice_app/build/ios/Debug-iphonesimulator/Try/Try.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/Melanie/flutter_apps/voice_app/ios/build/Pods.build/Debug-iphonesimulator/Try.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/Melanie/flutter_apps/voice_app/build/ios/Debug-iphonesimulator/Try/Try.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "Try-Swift.h",
+      'external-contents': "/Users/Melanie/flutter_apps/voice_app/ios/build/Pods.build/Debug-iphonesimulator/Try.build/unextended-interface-header.h",
+    }]
+    }]
+}

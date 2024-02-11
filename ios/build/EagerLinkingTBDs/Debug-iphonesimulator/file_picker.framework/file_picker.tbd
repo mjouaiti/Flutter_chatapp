@@ -1,0 +1,10 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-ios-simulator, arm64-ios-simulator ]
+flags:           [ not_app_extension_safe ]
+install-name:    '@rpath/file_picker.framework/file_picker'
+exports:
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator ]
+    symbols:         [ _file_pickerVersionNumber, _file_pickerVersionString ]
+    objc-classes:    [ FileInfo, FilePickerPlugin, FileUtils, ImageUtils, PodsDummy_file_picker ]
+...

@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "504f77adcca0b6ace3cfe9da785e8ebce0b57fdda1df7120190b793d7209fb54"
+build_start_time: [1707056968, 746457000]
+build_end_time: [1707056974, 608822000]
+inputs:
+  "/Users/Melanie/.pub-cache/hosted/pub.dev/flutter_tts-3.8.5/ios/Classes/AudioCategory.swift": [1705403433, 610116834]
+  "/Users/Melanie/.pub-cache/hosted/pub.dev/flutter_tts-3.8.5/ios/Classes/AudioCategoryOptions.swift": [1705403433, 609919082]
+  "/Users/Melanie/.pub-cache/hosted/pub.dev/flutter_tts-3.8.5/ios/Classes/AudioModes.swift": [1705403433, 609670038]
+  "/Users/Melanie/.pub-cache/hosted/pub.dev/flutter_tts-3.8.5/ios/Classes/SwiftFlutterTtsPlugin.swift": [1705403433, 609235033]

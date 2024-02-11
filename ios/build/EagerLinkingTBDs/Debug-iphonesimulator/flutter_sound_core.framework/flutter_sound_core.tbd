@@ -1,0 +1,28 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-ios-simulator, arm64-ios-simulator ]
+flags:           [ not_app_extension_safe ]
+install-name:    '@rpath/flutter_sound_core.framework/flutter_sound_core'
+exports:
+  - targets:         [ x86_64-ios-simulator ]
+    weak-symbols:    [ __ZTI17AudioRecInterface, __ZTS17AudioRecInterface ]
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator ]
+    symbols:         [ __ZN10avAudioRec12stopRecorderEv, __ZN10avAudioRec13pauseRecorderEv, 
+                       __ZN10avAudioRec13startRecorderEv, __ZN10avAudioRec14dbPeakProgressEv, 
+                       __ZN10avAudioRec14resumeRecorderEv, __ZN10avAudioRec16recorderProgressEv, 
+                       __ZN10avAudioRec9getStatusEv, __ZN10avAudioRecC1E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, 
+                       __ZN10avAudioRecC2E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, 
+                       __ZN10avAudioRecD0Ev, __ZN10avAudioRecD1Ev, __ZN10avAudioRecD2Ev, 
+                       __ZN19AudioRecorderEngine12stopRecorderEv, __ZN19AudioRecorderEngine13pauseRecorderEv, 
+                       __ZN19AudioRecorderEngine13startRecorderEv, __ZN19AudioRecorderEngine14dbPeakProgressEv, 
+                       __ZN19AudioRecorderEngine14resumeRecorderEv, __ZN19AudioRecorderEngine16recorderProgressEv, 
+                       __ZN19AudioRecorderEngine9getStatusEv, __ZN19AudioRecorderEngineC1E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, 
+                       __ZN19AudioRecorderEngineC2E7t_CODECP8NSStringP19NSMutableDictionaryP14FlautoRecorder, 
+                       __ZTI10avAudioRec, __ZTI19AudioRecorderEngine, __ZTS10avAudioRec, 
+                       __ZTS19AudioRecorderEngine, __ZTV10avAudioRec, __ZTV19AudioRecorderEngine, 
+                       _audioRec, _flutter_sound_coreVersionNumber, _flutter_sound_coreVersionString, 
+                       _tabSessionPort, _theFlautoEngine ]
+    objc-classes:    [ AudioEngine, AudioEngineFromMic, AudioPlayerFlauto, Flauto, 
+                       FlautoPlayer, FlautoRecorder, PodsDummy_flutter_sound_core ]
+    objc-ivars:      [ FlautoPlayer.m_callBack, FlautoPlayer.m_playerEngine, FlautoRecorder.m_callBack ]
+...

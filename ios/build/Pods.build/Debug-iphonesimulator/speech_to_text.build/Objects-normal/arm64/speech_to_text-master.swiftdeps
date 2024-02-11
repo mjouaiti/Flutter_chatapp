@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "a7cc12f298a4cb5488f030c067eccac5fd40f9eb59b509a0bf48f0fde95dd1db"
+build_start_time: [1706018564, 494011000]
+build_end_time: [1706018571, 368504000]
+inputs:
+  "/Users/Melanie/.pub-cache/hosted/pub.dev/speech_to_text-6.5.1/ios/Classes/SwiftSpeechToTextPlugin.swift": [1705399587, 424411874]

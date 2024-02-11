@@ -1,0 +1,43 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "5c7e910f9638f50a115606f3064a3ef258027ad33646c433a31a2bc6187703e1"
+build_start_time: [1707056979, 43593000]
+build_end_time: [1707056981, 927697000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageBaseManager.swift": [1707056954, 54647502]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageDataManager.swift": [1707056954, 54161918]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/DKImageGroupDataManager.swift": [1707056954, 54433544]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Export.swift": [1707056954, 54975003]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset+Fetch.swift": [1707056954, 55639838]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAsset.swift": [1707056954, 55791296]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImageDataManager/Model/DKAssetGroup.swift": [1707056954, 55365462]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageAssetExporter.swift"
+  : [1707056954, 56652881]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImageExtensionController.swift"
+  : [1707056954, 56259797]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerController.swift"
+  : [1707056954, 56916132]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKImagePickerControllerBaseUIDelegate.swift"
+  : [1707056954, 57242924]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/DKPopoverViewController.swift"
+  : [1707056954, 57520633]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/Resource/DKImagePickerControllerResource.swift"
+  : [1707056954, 71984495]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupCellItemProtocol.swift"
+  : [1707056954, 58751552]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailBaseCell.swift"
+  : [1707056954, 58899761]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailCameraCell.swift"
+  : [1707056954, 58341968]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailImageCell.swift"
+  : [1707056954, 59046261]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/Cell/DKAssetGroupDetailVideoCell.swift"
+  : [1707056954, 58520468]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupDetailVC.swift"
+  : [1707056954, 58092592]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupGridLayout.swift"
+  : [1707056954, 57923800]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKAssetGroupListVC.swift"
+  : [1707056954, 59303011]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/DKImagePickerController/View/DKPermissionView.swift"
+  : [1707056954, 57766633]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKImagePickerController/Sources/Extensions/DKImageExtensionGallery.swift": [1707056954, 52973041]

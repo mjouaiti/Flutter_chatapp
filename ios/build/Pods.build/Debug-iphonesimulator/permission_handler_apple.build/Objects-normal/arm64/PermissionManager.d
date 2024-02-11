@@ -1,0 +1,41 @@
+dependencies: \
+  /Users/Melanie/flutter_apps/voice_app/ios/build/Pods.build/Debug-iphonesimulator/permission_handler_apple.build/module.modulemap \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/PermissionManager.m \
+  /Users/Melanie/flutter_apps/voice_app/ios/Pods/Target\ Support\ Files/permission_handler_apple/permission_handler_apple-prefix.pch \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/PermissionManager.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Modules/module.modulemap \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/Flutter.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterEngineGroup.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/Melanie/flutter/bin/cache/artifacts/engine/ios/Flutter.xcframework/ios-arm64_x86_64-simulator/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/AudioVideoPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/PermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/PermissionHandlerEnums.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/AppTrackingTransparencyPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/UnknownPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/BluetoothPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/ContactPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/EventPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/LocationPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/MediaLibraryPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/PhonePermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/PhotoPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/SensorPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/SpeechPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/StoragePermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/NotificationPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/CriticalAlertsPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/strategies/AssistantPermissionStrategy.h \
+  /Users/Melanie/.pub-cache/hosted/pub.dev/permission_handler_apple-9.3.0/ios/Classes/util/Codec.h

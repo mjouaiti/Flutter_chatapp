@@ -1,0 +1,33 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "c0e44c6589b7d00e0bb507e4d2c9810d32f3a047bc574968b4de9db4e91c469e"
+build_start_time: [1707056976, 702598000]
+build_end_time: [1707056980, 185604000]
+inputs:
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGallery.swift": [1707056954, 83872476]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryContentVC.swift": [1707056954, 84299352]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryItem.swift": [1707056954, 84811061]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoGalleryScrollView.swift": [1707056954, 89424653]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoIncrementalIndicator.swift": [1707056954, 84610227]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/DKPhotoPreviewFactory.swift": [1707056954, 81817680]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoBasePreviewVC.swift": [1707056954, 86136772]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoContentAnimationView.swift": [1707056954, 89098111]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoProgressIndicator.swift": [1707056954, 89255570]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/DKPhotoProgressIndicatorProtocol.swift": [1707056954, 88514277]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoBaseImagePreviewVC.swift"
+  : [1707056954, 87438316]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageDownloader.swift": [1707056954, 86451148]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImagePreviewVC.swift": [1707056954, 86735981]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageUtility.swift": [1707056954, 86989732]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/ImagePreview/DKPhotoImageView.swift": [1707056954, 87244733]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PDFPreview/DKPDFView.swift": [1707056954, 88765402]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PDFPreview/DKPhotoPDFPreviewVC.swift": [1707056954, 88927902]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PlayerPreview/DKPhotoPlayerPreviewVC.swift": [1707056954, 85784521]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/PlayerPreview/DKPlayerView.swift": [1707056954, 85619146]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoQRCodeResultVC.swift": [1707056954, 88251901]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Preview/QRCode/DKPhotoWebVC.swift": [1707056954, 87799317]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Resource/DKPhotoGalleryResource.swift": [1707056954, 97015418]
+  ? "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryInteractiveTransition.swift"
+  : [1707056954, 82591640]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionController.swift": [1707056954, 82197348]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionDismiss.swift": [1707056954, 83066974]
+  "/Users/Melanie/flutter_apps/voice_app/ios/Pods/DKPhotoGallery/DKPhotoGallery/Transition/DKPhotoGalleryTransitionPresent.swift": [1707056954, 82768266]
