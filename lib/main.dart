@@ -5,6 +5,9 @@ import 'package:voice_app/plwd.dart';
 
 import 'carer.dart';
 import 'plwd.dart';
+import 'recording_list.dart';
+import 'event_log.dart';
+import 'help.dart';
 
 void main() {
   runApp(const MyApp());
@@ -90,10 +93,34 @@ class MyHomePage extends StatelessWidget {
           );
           }, child: const Text('PLwD Questionnaire'),
           ),
+
           ElevatedButton(onPressed: () {
             appState.getNext();
             print('button pressed');
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => EventLog()),
+          );
+          }, child: const Text('Log Event'),
+          ),
+
+          ElevatedButton(onPressed: () {
+            appState.getNext();
+            print('button pressed');
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Help()),
+          );
           }, child: const Text('Help'),
+          ),
+          ElevatedButton(onPressed: () {
+            appState.getNext();
+            print('button pressed');
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => recordingList()),
+          );
+          }, child: const Text('List of recordings'),
           ),
           ],
         ),

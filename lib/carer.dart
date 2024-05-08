@@ -3,28 +3,31 @@ import 'package:flutter/material.dart';
 import 'dart:convert'; 
 
 import 'dart:io' show Platform;
+import 'dart:io';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/foundation.dart';
-import 'dart:io';
 
-// import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:http/http.dart' as http;
+import 'package:http_parser/http_parser.dart';
 import 'message_model.dart';
 import 'reply_model.dart';
 import 'sent_model.dart';
 // import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:flutter_sound/flutter_sound.dart';
+import 'package:audio_session/audio_session.dart';
+import 'package:flutter_sound_platform_interface/flutter_sound_recorder_platform_interface.dart';
+import 'package:permission_handler/permission_handler.dart';
 
-// import 'package:flutter_sound/flutter_sound.dart';
-// import 'package:audio_session/audio_session.dart';
-// import 'package:flutter_sound_platform_interface/flutter_sound_recorder_platform_interface.dart';
-// import 'package:permission_handler/permission_handler.dart';
+// import 'package:whisper_dart/whisper_dart.dart';
 // import "package:whisper_dart/scheme/scheme.dart";
-// import "package:whisper_dart/whisper_dart.dart";
-// import 'package:whisper_flutter/whisper_flutter.dart';
 
-// const theSource = AudioSource.microphone;
+import 'dart:ffi';
+import 'package:ffi/ffi.dart';
+
+const theSource = AudioSource.microphone;
+
 
 class carerQuestionnaire extends StatefulWidget {
 
@@ -38,7 +41,8 @@ enum TtsState { playing, stopped, paused, continued }
 class _carerQuestionnaireState extends State<carerQuestionnaire> {
 
   late List<Message> messages ;
-  late String url;
+  final String url = "http://localhost:5005/webhooks/rest/webhook";
+  final String url_whisper = 'http://localhost:3000';
 
   String? language;
   String? engine;
@@ -48,14 +52,18 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
   String? _newVoiceText;
 
   // stt.SpeechToText _speech = stt.SpeechToText();
-  FlutterTts flutterTts = FlutterTts();  
-  final bool _flutterSTT = true;
+  FlutterTts flutterTts = FlutterTts();
 
   bool _isListening = false;
   String _text = 'Press the button and start speaking';
   double _confidence = 1.0;
 
   TtsState ttsState = TtsState.stopped;
+
+  FlutterSoundRecorder? _mRecorder = FlutterSoundRecorder();
+  Codec _codec = Codec.aacMP4;
+  bool _mRecorderIsInited = false;
+  String _mPath = '/Users/Melanie/Downloads/tau_file.mp4';
 
   get isPlaying => ttsState == TtsState.playing;
   get isStopped => ttsState == TtsState.stopped;
@@ -65,31 +73,58 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
   bool get isIOS => !kIsWeb && Platform.isIOS;
   bool get isAndroid => !kIsWeb && Platform.isAndroid;
 
-  final controller = TextEditingController();
-
-  // FlutterSoundRecorder? _mRecorder = FlutterSoundRecorder();
-  // Codec _codec = Codec.aacMP4;
-  // bool _mRecorderIsInited = false;
-  // String _mPath = 'tau_file.mp4';
-
-  // Whisper whisper = Whisper(whisperLib: "./ggml-model-whisper-small.bin");
-
   @override
   void initState() { 
-    if(_flutterSTT){
-      initTts();
-      // _speech = stt.SpeechToText();
-  }
-    else{
-    // initRecorder();
-  }
-    url = "http://localhost:5005/webhooks/rest/webhook";
+    initTts();
+    initRecorder();
+
     var mess = "Hey! How may I assist you?";
     _newVoiceText = mess;
     _speak();
 
     messages =[ Message(text: mess, time: "123", isMe: false)] ;
+    // _speech = stt.SpeechToText();
     super.initState();
+  }
+
+  Future<void> initRecorder() async{
+    if (!kIsWeb) {
+      var status = await Permission.microphone.status;
+      print(status);
+      status = await Permission.microphone.request();
+      print(status);
+
+      if (status != PermissionStatus.granted) {
+        throw RecordingPermissionException('Microphone permission not granted');
+      }
+    }
+    await _mRecorder!.openRecorder();
+    if (!await _mRecorder!.isEncoderSupported(_codec) && kIsWeb) {
+      _codec = Codec.opusWebM;
+      _mPath = 'tau_file.webm';
+      if (!await _mRecorder!.isEncoderSupported(_codec) && kIsWeb) {
+        _mRecorderIsInited = true;
+        return;
+      }
+    }
+    final session = await AudioSession.instance;
+    await session.configure(AudioSessionConfiguration(
+      avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
+      avAudioSessionCategoryOptions:
+          AVAudioSessionCategoryOptions.allowBluetooth |
+              AVAudioSessionCategoryOptions.defaultToSpeaker,
+      avAudioSessionMode: AVAudioSessionMode.spokenAudio,
+      avAudioSessionRouteSharingPolicy:
+          AVAudioSessionRouteSharingPolicy.defaultPolicy,
+      avAudioSessionSetActiveOptions: AVAudioSessionSetActiveOptions.none,
+      androidAudioAttributes: const AndroidAudioAttributes(
+        contentType: AndroidAudioContentType.speech,
+        flags: AndroidAudioFlags.none,
+        usage: AndroidAudioUsage.voiceCommunication,
+      ),
+      androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
+      androidWillPauseWhenDucked: true,
+    ));
   }
 
   initTts() {
@@ -181,53 +216,10 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
     }
   }
 
-  // Future<void> initRecorder() async{
-  //   if (!kIsWeb) {
-  //     var status = await Permission.microphone.status;
-  //     print(status);
-  //     status = await Permission.microphone.request();
-  //     print(status);
-
-  //     if (status != PermissionStatus.granted) {
-  //       throw RecordingPermissionException('Microphone permission not granted');
-  //     }
-  //   }
-  //   await _mRecorder!.openRecorder();
-  //   if (!await _mRecorder!.isEncoderSupported(_codec) && kIsWeb) {
-  //     _codec = Codec.opusWebM;
-  //     _mPath = 'tau_file.webm';
-  //     if (!await _mRecorder!.isEncoderSupported(_codec) && kIsWeb) {
-  //       _mRecorderIsInited = true;
-  //       return;
-  //     }
-  //   }
-  //   final session = await AudioSession.instance;
-  //   await session.configure(AudioSessionConfiguration(
-  //     avAudioSessionCategory: AVAudioSessionCategory.playAndRecord,
-  //     avAudioSessionCategoryOptions:
-  //         AVAudioSessionCategoryOptions.allowBluetooth |
-  //             AVAudioSessionCategoryOptions.defaultToSpeaker,
-  //     avAudioSessionMode: AVAudioSessionMode.spokenAudio,
-  //     avAudioSessionRouteSharingPolicy:
-  //         AVAudioSessionRouteSharingPolicy.defaultPolicy,
-  //     avAudioSessionSetActiveOptions: AVAudioSessionSetActiveOptions.none,
-  //     androidAudioAttributes: const AndroidAudioAttributes(
-  //       contentType: AndroidAudioContentType.speech,
-  //       flags: AndroidAudioFlags.none,
-  //       usage: AndroidAudioUsage.voiceCommunication,
-  //     ),
-  //     androidAudioFocusGainType: AndroidAudioFocusGainType.gain,
-  //     androidWillPauseWhenDucked: true,
-  //   ));
-  // }
-
   Future _speak() async {
     await flutterTts.setVolume(volume);
     await flutterTts.setSpeechRate(rate);
     await flutterTts.setPitch(pitch);
-
-    print("Speak");
-    print(_newVoiceText);
 
     if (_newVoiceText != null) {
       if (_newVoiceText!.isNotEmpty) {
@@ -237,62 +229,45 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
   }
 
   void _listen(String lang) async {
+    if (!_isListening) {
+      setState(() => _isListening = true);
+      int timestamp = DateTime.now().millisecondsSinceEpoch;
+      DateTime tsdate = DateTime.fromMillisecondsSinceEpoch(timestamp);
+      String datetime = tsdate.year.toString() + "_" + tsdate.month.toString() + "_" + 
+                        tsdate.day.toString() + "-" + tsdate.hour.toString() + 
+                        "_" + tsdate.minute.toString() + "_" + tsdate.second.toString();
+      print(datetime);
+      _mPath = "/Users/Melanie/Downloads/" + datetime + ".mp4";
+      print(_mPath);
+      _mRecorder!.startRecorder(
+      toFile: _mPath,
+      codec: _codec,
+      audioSource: theSource,
+      ).then((value) async {
+        
+      });
+    } else{
+      await _mRecorder!.stopRecorder().then((value) {});
 
-    // if(!_flutterSTT){
-    //   if (!_isListening) {
-    //     setState(() => _isListening = true);
-    //     _mRecorder!.startRecorder(
-    //   toFile: _mPath,
-    //   codec: _codec,
-    //   audioSource: theSource,
-    //   ).then((value) async {
+      var res = await _whisper_server("Time");
+      print(res);
+      controller.text = res;
 
-//         var res = await whisper.request(
-//     whisperLib: "libwhisper.so",
-//     whisperRequest: WhisperRequest.fromWavFile(
-//         audio: File(_mPath),
-//         model: File("./ggml-model-whisper-small.bin"),
-//     ),
-// );
-
-        // Transcribe transcribe = await whisper.transcribe(
-        // audio: _mPath,
-        // model: "./ggml-model-whisper-small.bin",
-        // language: "en", // language
-  // );
-  //     setState(() {controller.text = "test";});
-
-  //   });
-  //   } else if(_text!='Press the button and start speaking') {
-  //   await _mRecorder!.stopRecorder().then((value) {
-  //     setState(() { _isListening = false;_text = 'Press the button and start speaking';});
-  //   });
-  //   }
-  // } else{
-      if (!_isListening) {
-      //   bool available = await _speech.initialize(
-      //   onStatus: (val) => print('onStatus: $val'),
-      //   onError: (val) => print('onError: $val'),
-      // );
-      //   if (available){
-      //     setState(() => _isListening = true);
-      //     _speech.listen(
-      //       localeId: lang,
-      //       onResult: (val) => setState(() {
-      //         _text = val.recognizedWords;
-      //         controller.text = _text;
-      //         if (val.hasConfidenceRating && val.confidence > 0) {
-      //           _confidence = val.confidence;
-      //         }
-      //       }),
-      //     );
-      //   }
-      // } else{
-      //   setState(() { _isListening = false;_text = 'Press the button and start speaking';});
-      //   _speech.stop();
-      // }
-  } 
+      // messages.add(Message(
+      //   text: _text,
+      //   time: "Time",
+      //   isMe: true
+      //   ));
+      //  messages.add(Message(text: "loading", time: "123", isMe: true));
+      // _networkReply(_text, "", "Time");
+      
+      setState(() {_isListening = false;_text = 'Press the button and start speaking';
+                  controller.text = res!;});
+    }
   }
+      
+
+  final controller = TextEditingController();
 
   _networkReply(String message,String sender,String time) async{
       Sent sentMessage = Sent(sender,message);
@@ -318,6 +293,23 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
       }
   }
 
+  Future _whisper_server(String time) async{
+    var request = http.MultipartRequest('POST', Uri.parse(url_whisper));
+    request.files.add(
+      await http.MultipartFile.fromPath(
+        'file',
+        _mPath,
+      contentType: MediaType('application', 'audio/wav'),
+      )
+    );
+    var resp = await request.send();
+    print(resp);
+    var res = await http.Response.fromStream(resp);
+    print(res);
+    return res.body.replaceAll('"', '').trim();
+  }
+
+
   _buildMessage(Message message, bool isMe) {
     final Container msg = Container(
       margin: isMe
@@ -336,7 +328,7 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.70,
       decoration: BoxDecoration(
-        color: isMe ? Color.fromARGB(255, 72, 97, 196) : Color.fromARGB(255, 5, 0, 81),
+        color: isMe ? Color.fromARGB(255, 72, 107, 196) :Color.fromARGB(255, 0, 4, 81),
         borderRadius: isMe
             ? BorderRadius.only(
                 topLeft: Radius.circular(15.0),
@@ -373,10 +365,10 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
     
 
       return Scaffold(
-      backgroundColor: Color.fromARGB(255, 155, 155, 244),
+      backgroundColor: Color.fromARGB(255, 155, 173, 244),
       appBar: AppBar(
         // backgroundColor: Color.red,
-        backgroundColor: Color.fromARGB(255, 155, 155, 244),
+        backgroundColor: Color.fromARGB(255, 155, 173, 244),
         title: Text(
           "Carer Questionnaire",
           style: TextStyle(
@@ -436,10 +428,9 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton.icon(
-                  icon: _isListening? CircularProgressIndicator(strokeWidth: 2,):Icon(Icons.mic, color:Color.fromARGB(255, 7, 70, 245)),
+                  icon: _isListening? CircularProgressIndicator(strokeWidth: 2,):Icon(Icons.mic),
                   label: Text(
-                    _isListening? "Stop":"Speak in English",
-                    style: TextStyle(color: Color.fromARGB(255, 7, 70, 245),)
+                    _isListening? "Stop":"Speak in English"
                   ),
                   onPressed: ()=>_listen("en"),
                 ),
@@ -449,7 +440,7 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
             Container(
       padding: EdgeInsets.symmetric(horizontal: 8.0),
       height: 90.0,
-      color: Color.fromARGB(255, 155, 155, 244),
+      color: Color.fromARGB(255, 155, 173, 244),
       child: Row(
         children: <Widget>[
           Expanded(
@@ -460,20 +451,20 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
               messages.add(Message(text: text, time: "123", isMe: true));
               messages.add(Message(text: "loading", time: "123", isMe: true));
               controller.clear();
-              _networkReply(text, "0", "Time");
+              _networkReply(text, "", "Time");
               setState(() {});
             },
               textCapitalization: TextCapitalization.sentences,
               decoration: InputDecoration.collapsed(
                 hintText: 'Send a message...',
-                hintStyle: TextStyle(color: Color.fromARGB(160, 0, 30, 118),)
+                hintStyle: TextStyle(color: Color.fromARGB(160, 0, 16, 118),)
               ),
             ),
           ),
           // IconButton(
           //   icon: _isListening? Icon(Icons.stop):Icon(Icons.mic),
           //   iconSize: 25.0,
-          //   :color_isListening?Colors.red: Color(0xffF5F7DC) ,
+          //   color:_isListening?Colors.red: Color(0xffF5F7DC) ,
           //   onPressed:()=>_listen(1)
           // ),
           IconButton(
@@ -506,7 +497,5 @@ class _carerQuestionnaireState extends State<carerQuestionnaire> {
     @override void dispose() {
     super.dispose();
     controller.dispose();
-    // _mRecorder!.closeRecorder();
-    // _mRecorder = null;
   }
 }
